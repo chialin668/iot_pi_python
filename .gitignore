@@ -1,5 +1,5 @@
 # certificate and keys
-ssl
+ssl/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
