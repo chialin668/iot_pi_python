@@ -1,0 +1,16 @@
+{ 
+  "sql":"SELECT * FROM 'topic/iot1/data'",
+  "ruleDisabled":false,
+  "actions":[ 
+    { 
+      "dynamoDB":{ 
+        "tableName":"iot1",
+        "hashKeyField":"SerialNumber",
+        "hashKeyValue":"${serial_number()}",
+        "rangeKeyField":"Timestamp",
+        "rangeKeyValue":"${timestamp()}",
+        "roleArn":"arn:aws:iam::123275298972:role/iot1-role"
+      }
+    }
+  ]
+}
